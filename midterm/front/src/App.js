@@ -41,7 +41,7 @@ const App = () => {
 
   return (
     <main>
-      <h1 className="title">TODO LISTS</h1>
+      <h1 className="title">TODO LIST</h1>
 
       <div className="input_holder">
         <input
