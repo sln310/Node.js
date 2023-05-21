@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BLOG</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- create template -->
+    <div class="board-section">
+      <h2>BLOG</h2>
+      <!-- insert -->
+      <div class="thread-section">
+        <div class="single-thread">
+          <h3>title</h3>
+          <p>contents</p>
+        </div>
+        <div class="single-thread">
+          <h3>title</h3>
+          <p>contents</p>
+        </div>
+        <div class="single-thread">
+          <h3>title</h3>
+          <p>contents</p>
+        </div>
+      </div>
+      <form class="form-section">
+        <p>title</p>
+        <input type="text" placeholder="タイトル" id="inputTitle" />
+        <p>contents</p>
+        <textarea id="inputContent" rows="10" cols="30"></textarea>
+        <br />
+        <button id="submitButton" type="submit">send</button>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
