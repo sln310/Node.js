@@ -2,5 +2,5 @@
   "version": 2,
   "name": "music-album",
   "builds": [{ "src": "./server.js", "use": "@vercel/node" }],
-  "rewrites": [{ "src": "/(.*)", "destination": "/server.js" }]
+  "rewrites": [{ "source": "/(.*)", "destination": "/server.js" }]
 }
