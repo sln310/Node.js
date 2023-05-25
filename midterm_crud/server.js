@@ -11,7 +11,7 @@ mongoose
   .connect(
     "mongodb+srv://sato875:03210321St@cluster0.or7mikl.mongodb.net/POST_DB?retryWrites=true&w=majority"
   )
-  .catch((err) => console.log(err));
+  .catch((err) => res.json(err));
 
 const postSchema = mongoose.Schema({
   title: String,
@@ -39,14 +39,14 @@ app.post("/create", (req, res) => {
 app.get("/posts", (req, res) => {
   Post.find()
     .then((items) => res.json(items))
-    .catch((err) => console.log(err));
+    .catch((err) => res.json(err));
 });
 
 app.delete("/delete/:id", (req, res) => {
   console.log(req.params);
   Post.findByIdAndDelete({ _id: req.params.id })
-    .then((doc) => console.log(doc))
-    .catch((err) => console.log(err));
+    .then((doc) => res.json(doc))
+    .catch((err) => res.json(err));
 });
 
 app.put("/update/:id", (req, res) => {
@@ -57,12 +57,10 @@ app.put("/update/:id", (req, res) => {
       description: req.body.description,
     }
   )
-    .then((doc) => console.log(doc))
-    .catch((err) => console.log(err));
+    .then((doc) => res.json(doc))
+    .catch((err) => res.json(err));
 });
 
 app.listen(3005, function () {
   console.log("Server is running");
 });
-
-//aaa
